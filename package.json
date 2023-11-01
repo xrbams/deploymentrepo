@@ -1,0 +1,79 @@
+{
+  "name": "iportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.26.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tippyjs/react": "^4.2.6",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.25",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@types/react-scroll": "^1.8.7",
+    "firebase": "^9.22.2",
+    "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
+    "react-content-loader": "^6.2.1",
+    "react-country-flag": "^3.1.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "styled-components": "^5.3.10",
+    "swiper": "^9.3.2",
+    "tippy.js": "^6.3.7",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "chart.js": "^3.9.1",
+    "classnames": "^2.3.2",
+    "customize-cra": "^1.0.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "formik": "^2.2.9",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "react-i18next": "^11.18.3",
+    "react-icons": "^4.10.1",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
