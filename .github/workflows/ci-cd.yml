@@ -6,16 +6,14 @@ name: CI/CD with docker
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
 
     steps:
      - uses: actions/checkout@v3
@@ -24,10 +22,7 @@ jobs:
        with:
          node-version: ${{ matrix.node-version}}
          cache: 'npm'
-     - run: npm ci
-     - run: npm install
-     - run: npm run build --if-present
+     - run: npm i
      - run: npm test
-    
-     - name: Build Docker Image
-       run: docker build -t client:${{ github.run_number }} .
+     - run: npm run build --if-present
+
