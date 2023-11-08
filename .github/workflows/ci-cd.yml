@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, 5GB]
+    runs-on: [self-hosted, 16GB]
 
     strategy:
       matrix:
@@ -23,7 +23,7 @@ jobs:
          node-version: ${{ matrix.node-version}}
          cache: 'npm'
          cache-dependency-path: client/package-lock.json
-     - run: npm i
+     - run: npm install
        working-directory: client
      - run: npm run build --if-present
        working-directory: client
