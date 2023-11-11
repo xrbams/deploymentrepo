@@ -23,9 +23,12 @@ jobs:
          node-version: ${{ matrix.node-version}}
          cache: 'npm'
          cache-dependency-path: client/package-lock.json
-     - run: npm i
+         
+     - run: docker build -t client-server-1:v0.0.1 .
        working-directory: client
        
-     - run: npm run build --if-present
+     - run: docker run -d -t -p 80:80 client-server-1:v0.0.1
        working-directory: client
+       
+    
 
