@@ -33,7 +33,7 @@ jobs:
      - run: sudo rm -r /var/www/tamk.web.portfolio/html/*
        working-directory: client
        
-     - run: scp -r ./build/* /var/www/tamk.web.portfolio/html/
+     - run: sudo scp -r ./build/* /var/www/tamk.web.portfolio/html/
        working-directory: client
        
     
