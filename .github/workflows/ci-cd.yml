@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [18]
 
     steps:
      - uses: actions/checkout@v2
@@ -24,10 +24,16 @@ jobs:
          cache: 'npm'
          cache-dependency-path: client/package-lock.json
          
-     - run: docker build -t client-server-1:v0.0.1 .
+     - run: npm i
        working-directory: client
        
-     - run: docker run -d -t -p 80:80 client-server-1:v0.0.1
+     - run: npm run build
+       working-directory: client
+       
+     - run: sudo rm -r /var/www/tamk.web.portfolio/html/*
+       working-directory: client
+       
+     - run: scp -r ./build/* /var/www/tamk.web.portfolio/html/
        working-directory: client
        
     
